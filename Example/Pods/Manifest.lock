@@ -1,0 +1,16 @@
+PODS:
+  - XTableViewIndex (0.1.0)
+
+DEPENDENCIES:
+  - XTableViewIndex (from `../`)
+
+EXTERNAL SOURCES:
+  XTableViewIndex:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XTableViewIndex: fcbf243a03b280ae690db9920a3ef47430d65908
+
+PODFILE CHECKSUM: a52db397692f049e5bb7ed91f66aaf42389a977e
+
+COCOAPODS: 1.8.4

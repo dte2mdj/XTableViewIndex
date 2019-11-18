@@ -1,0 +1,6 @@
+framework module XTableViewIndex {
+  umbrella header "XTableViewIndex-umbrella.h"
+
+  export *
+  module * { export * }
+}
