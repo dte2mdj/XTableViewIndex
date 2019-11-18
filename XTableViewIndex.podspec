@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'XTableViewIndex'
-    s.version          = '0.1.0'
+    s.version          = '0.0.1'
     s.summary          = '用于替代系统私有的UITableViewIndex'
 
     # This description is used to generate tags and improve search results.
@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
     5、支持全局初始配置
     DESC
 
-    s.homepage         = 'https://github.com/Xwg/XTableViewIndex'
+    s.homepage         = 'https://github.com/dte2mdj'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Xwg' => 'awen365@qq.com' }
-    s.source           = { :git => 'https://github.com/Xwg/XTableViewIndex.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/dte2mdj/XTableViewIndex.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
     s.swift_version = '5.0'
