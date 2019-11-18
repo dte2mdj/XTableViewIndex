@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XTableViewIndex_Example' do
+  pod 'XTableViewIndex', :path => '../'
+
+  target 'XTableViewIndex_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
