@@ -23,20 +23,24 @@ import UIKit
     @objc func tableViewIndex(_ tableViewIndex: XTableViewIndex, didSelectItemAt index: Int)
 }
 
-
 final public class XTableViewIndex: UIView {
     /// item 的宽度
     public static var itemWidth: CGFloat = 13.0
     
     /// item 默认颜色（默认：#44557D）
-    public static var itemColor: UIColor = #colorLiteral(red: 0.2666666667, green: 0.3333333333, blue: 0.4901960784, alpha: 1)
+    public static var itemTextColor: UIColor = #colorLiteral(red: 0.2666666667, green: 0.3333333333, blue: 0.4901960784, alpha: 1)
     /// item 选中颜色（默认：.white）
-    public static var itemSelectedColor: UIColor = .white
+    public static var itemSelectedTextColor: UIColor = .white
     
     /// item 默认背景色（默认：.clear）
     public static var itemBackgroundColor: UIColor = .clear
     /// item 选中背景色（默认：#FF7721）
     public static var itemSelectedBackgroundColor: UIColor = #colorLiteral(red: 1, green: 0.4666666667, blue: 0.1294117647, alpha: 1)
+    
+    /// item 默认字体（默认：.systemFont(ofSize: 10.0)）
+    public static var itemFont: UIFont = .systemFont(ofSize: 10.0)
+    /// item 选中字体（默认：.systemFont(ofSize: 10.0)）
+    public static var itemSelectedFont: UIFont = .systemFont(ofSize: 10.0)
     
     /// item 的宽度
     public var itemWidth = XTableViewIndex.itemWidth {
@@ -47,34 +51,49 @@ final public class XTableViewIndex: UIView {
     }
     
     /// item 默认颜色（默认：#44557D）
-    public var itemColor = XTableViewIndex.itemColor {
+    public var itemTextColor = XTableViewIndex.itemTextColor {
         didSet {
-            guard oldValue != itemColor else { return }
+            guard oldValue != itemTextColor else { return }
             _setNeedUpdateItemsColor()
         }
     }
     /// item 选中颜色（默认：.white）
-    public var itemSelectedColor = XTableViewIndex.itemSelectedColor {
-           didSet {
-               guard oldValue != itemSelectedColor else { return }
-               _setNeedUpdateItemsColor()
-           }
-       }
+    public var itemSelectedTextColor = XTableViewIndex.itemSelectedTextColor {
+        didSet {
+            guard oldValue != itemSelectedTextColor else { return }
+            _setNeedUpdateItemsColor()
+        }
+    }
     
     /// item 默认背景色（默认：.clear）
     public var itemBackgroundColor = XTableViewIndex.itemBackgroundColor {
-           didSet {
-               guard oldValue != itemBackgroundColor else { return }
-               _setNeedUpdateItemsColor()
-           }
-       }
+        didSet {
+            guard oldValue != itemBackgroundColor else { return }
+            _setNeedUpdateItemsColor()
+        }
+    }
     /// item 选中背景色（默认：#FF7721）
     public var itemSelectedBackgroundColor = XTableViewIndex.itemSelectedBackgroundColor {
-           didSet {
-               guard oldValue != itemSelectedBackgroundColor else { return }
-               _setNeedUpdateItemsColor()
-           }
-       }
+        didSet {
+            guard oldValue != itemSelectedBackgroundColor else { return }
+            _setNeedUpdateItemsColor()
+        }
+    }
+    
+    /// item 默认字体
+    public var itemFont: UIFont = XTableViewIndex.itemFont {
+        didSet {
+            guard oldValue != itemFont else { return }
+            _setNeedUpdateItemsFont()
+        }
+    }
+    /// item 选中字体
+    public var itemSelectedFont: UIFont = XTableViewIndex.itemSelectedFont {
+        didSet {
+            guard oldValue != itemSelectedFont else { return }
+            _setNeedUpdateItemsFont()
+        }
+    }
     
     /// 数据源
     weak public var dataSource: XTableViewIndexDataSource? {
@@ -133,7 +152,7 @@ final public class XTableViewIndex: UIView {
     /// 选中的 item
     /// - Parameter index: 索引
     public func selectItem(at index: Int) {
-        guard index >= 0 && index < items.count - 1 && index != selectedItem?.tag else { return }
+        guard index >= 0 && index < items.count && index != selectedItem?.tag else { return }
         _setSelectedItem(items[index], needFeedback: false, needExecDelegate: false)
     }
     
@@ -152,7 +171,7 @@ extension XTableViewIndex {
     // 开始
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-    
+        
         guard let item = _getNextItem(touches, with: event) else { return }
         
         isOnTouch = true
@@ -194,7 +213,7 @@ private extension XTableViewIndex {
     
     /// 初始化设置 subviews
     func _initSetupSubviews() {
-
+        
         // 添加 subview
         translatesAutoresizingMaskIntoConstraints = false
         previewItem.translatesAutoresizingMaskIntoConstraints = false
@@ -254,8 +273,10 @@ private extension XTableViewIndex {
         let item = UILabel()
         item.tag = index
         item.text = title
+        item.textColor = itemTextColor
+        item.font = itemFont
+        item.backgroundColor = itemBackgroundColor
         item.textAlignment = .center
-        item.font = UIFont.systemFont(ofSize: 10.0)
         item.layer.cornerRadius = itemWidth / 2.0
         item.layer.masksToBounds = true
         return item
@@ -272,12 +293,18 @@ private extension XTableViewIndex {
     
     /// 更新颜色
     func _setNeedUpdateItemsColor() {
-        selectedItem?.textColor = itemSelectedColor
-        selectedItem?.backgroundColor = itemSelectedBackgroundColor
-        for item in items {
-            let isSelected = item == selectedItem
-            item.textColor = isSelected ? itemSelectedColor : itemColor
-            item.backgroundColor = isSelected ? itemSelectedBackgroundColor : itemColor
+        items.forEach {
+            let isSelected = $0 == selectedItem
+            $0.textColor = isSelected ? itemSelectedTextColor : itemTextColor
+            $0.backgroundColor = isSelected ? itemSelectedBackgroundColor : itemTextColor
+        }
+    }
+    
+    /// 更新文字大小
+    func _setNeedUpdateItemsFont() {
+        items.forEach {
+            let isSelected = $0 == selectedItem
+            $0.font = isSelected ? itemSelectedFont : itemFont
         }
     }
     
@@ -289,14 +316,14 @@ private extension XTableViewIndex {
     func _setSelectedItem(_ item: UILabel, needFeedback: Bool = true, needExecDelegate: Bool = true) {
         guard selectedItem != item else { return }
         // 1.1 设置为默认样式
-        selectedItem?.textColor = itemColor
+        selectedItem?.textColor = itemTextColor
         selectedItem?.backgroundColor = itemBackgroundColor
-        selectedItem?.font = UIFont.systemFont(ofSize: 10)
+        selectedItem?.font = itemFont
         
         // 1.2 设置为选中样式
-        item.textColor = itemSelectedColor
+        item.textColor = itemSelectedTextColor
         item.backgroundColor = itemSelectedBackgroundColor
-        item.font = UIFont.systemFont(ofSize: 12)
+        item.font = itemSelectedFont
         
         // 1.3 保存
         selectedItem = item
