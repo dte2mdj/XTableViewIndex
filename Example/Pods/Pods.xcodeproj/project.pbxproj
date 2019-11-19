@@ -7,31 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D2924CF8E029E4DC6795D1E9578FE01 /* Pods-XTableViewIndex_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 224F1227A4C9AC1F354A57D125C7D1DF /* Pods-XTableViewIndex_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D2924CF8E029E4DC6795D1E9578FE01 /* Pods-XTableViewIndex_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB02E98DC6DEA704A2F18A1C0780F8B9 /* Pods-XTableViewIndex_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FCD610793E31B03530148E9DF4065E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		2FB3531A236DF5E125F5B50CE99A329B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		51EC6B032F259CF3A555213DCFFCBBFC /* XTableViewIndex.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */; };
-		56030BC8E86A11A46D8C36135E4C0700 /* Pods-XTableViewIndex_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B5F0B506FC5B0AF2542BF70ACF83E1 /* Pods-XTableViewIndex_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		831FFD1DD46E1FC1EE79760777782B26 /* preview_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2D1708AAC2ECD2CC2B0FDB4D9C1A9A /* preview_bg.png */; };
-		846A1AC2DB18C66900A39D6605E7E85F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		978A970FB3658D0042662A7301B97AB8 /* XTableViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE0E87E6168B3861436D45BEE9BACC /* XTableViewIndex.swift */; };
 		AC259626292023FD7E564C7EED836A53 /* preview_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEF11E880FB88DCCD6F98A891BA602D /* preview_bg@2x.png */; };
 		ACD435FABEDB79BF274F80F8E7E2650A /* XTableViewIndex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D3ABDFAA997F7417774CA76067776B /* XTableViewIndex-dummy.m */; };
 		B9CD1CFF77937A1E083989AA5F8C384B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		C5B2CBC49AEA7D2669CB3B4EB71CF661 /* Pods-XTableViewIndex_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 967A9111DF4DF95A1B9C87BE5F600E3C /* Pods-XTableViewIndex_Example-dummy.m */; };
+		C5B2CBC49AEA7D2669CB3B4EB71CF661 /* Pods-XTableViewIndex_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F23C7D0EB06928E0C7BE2496D08900 /* Pods-XTableViewIndex_Example-dummy.m */; };
 		C8D06FE65C70118B714607BD2A00DDB8 /* XTableViewIndex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C389A5615FE4CCCEC3BDA6FD2199DB0 /* XTableViewIndex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF32894B329361A776C59FB3302A5CC7 /* Pods-XTableViewIndex_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D0EB8375DD3BF58CF7B67537C2EB7C /* Pods-XTableViewIndex_Tests-dummy.m */; };
 		E1267D686C60BC52DB7310B79B66F8D0 /* preview_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCEB06C677CDC41D4FD3738E56497868 /* preview_bg@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		83B9F4A8F99FA7663A53DD316891107A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19B5685B4A72C76006025B7983BF7AD7;
-			remoteInfo = "Pods-XTableViewIndex_Example";
-		};
 		D95FB7AE70D932B599777CEF18328F18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -49,44 +39,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09F23C7D0EB06928E0C7BE2496D08900 /* Pods-XTableViewIndex_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTableViewIndex_Example-dummy.m"; sourceTree = "<group>"; };
 		0F968186CAB59D1E03D4F754023D461D /* Pods_XTableViewIndex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XTableViewIndex_Example.framework; path = "Pods-XTableViewIndex_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		136680317CA1C67F6D62FB146F908B69 /* Pods-XTableViewIndex_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTableViewIndex_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		13D3ABDFAA997F7417774CA76067776B /* XTableViewIndex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XTableViewIndex-dummy.m"; sourceTree = "<group>"; };
-		224F1227A4C9AC1F354A57D125C7D1DF /* Pods-XTableViewIndex_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XTableViewIndex_Example-umbrella.h"; sourceTree = "<group>"; };
+		13EFBC4556FEFF69B8DA9DD25E42FC03 /* Pods-XTableViewIndex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.release.xcconfig"; sourceTree = "<group>"; };
+		182E520715B2FE5AF9D0DCFB08288CF0 /* Pods-XTableViewIndex_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-Info.plist"; sourceTree = "<group>"; };
+		1F56FA5DA465E495E3BF826C27B44B6C /* Pods-XTableViewIndex_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2B01938053EC64CAA8FB916F11F907BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		30CE0E87E6168B3861436D45BEE9BACC /* XTableViewIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XTableViewIndex.swift; path = XTableViewIndex/Classes/XTableViewIndex.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		31390C96DD6C6F2DFE70E25E54D4137D /* XTableViewIndex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XTableViewIndex-Info.plist"; sourceTree = "<group>"; };
 		3D17BE77A5FD76CD3D0E4085D2B54674 /* XTableViewIndex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XTableViewIndex.modulemap; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4A414BA1CDC5E6F5F77BA99916D20D0D /* Pods-XTableViewIndex_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XTableViewIndex_Tests.modulemap"; sourceTree = "<group>"; };
-		53A0F4D6A516C34626284A171341A354 /* Pods-XTableViewIndex_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Tests-Info.plist"; sourceTree = "<group>"; };
-		54094760A8546572A812BED4DDC3CB78 /* Pods-XTableViewIndex_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5505AE2FDBE6CDA2C2A851E069397F85 /* Pods-XTableViewIndex_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XTableViewIndex_Example.modulemap"; sourceTree = "<group>"; };
 		570D3BA0960A5F4F95F53E9FDE6345EF /* XTableViewIndex-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XTableViewIndex-prefix.pch"; sourceTree = "<group>"; };
 		62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XTableViewIndex.bundle; path = "XTableViewIndex-XTableViewIndex.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C389A5615FE4CCCEC3BDA6FD2199DB0 /* XTableViewIndex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XTableViewIndex-umbrella.h"; sourceTree = "<group>"; };
+		6F0FE1B04B6A19D22FEF09EEA3023620 /* Pods-XTableViewIndex_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XTableViewIndex_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6FBCF30C301F364663BF2D907E29617E /* XTableViewIndex.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XTableViewIndex.xcconfig; sourceTree = "<group>"; };
-		742D46630C1ED030D9447910B26443FE /* Pods-XTableViewIndex_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		76B14859461B513F757433B63B634858 /* Pods-XTableViewIndex_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		78197A2178EF322F4C0ABDDF7FD3343D /* Pods-XTableViewIndex_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-Info.plist"; sourceTree = "<group>"; };
-		85EC4B314D7DE0AD5015C2BE26B6457E /* Pods-XTableViewIndex_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTableViewIndex_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		86A022960D3918335ADFFEE34565003A /* Pods-XTableViewIndex_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		88D0EB8375DD3BF58CF7B67537C2EB7C /* Pods-XTableViewIndex_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTableViewIndex_Tests-dummy.m"; sourceTree = "<group>"; };
 		89702DAB8DAA3FDB55CF1B11B16A931A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		8E6E147E67121C2FF66E262A7B3A6BD2 /* Pods-XTableViewIndex_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTableViewIndex_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		92B5F0B506FC5B0AF2542BF70ACF83E1 /* Pods-XTableViewIndex_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XTableViewIndex_Tests-umbrella.h"; sourceTree = "<group>"; };
-		938F405B176916AB460E61C534CA4917 /* Pods-XTableViewIndex_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		94E0F0B447EC1274F108B9F49A472162 /* ResourceBundle-XTableViewIndex-XTableViewIndex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XTableViewIndex-XTableViewIndex-Info.plist"; sourceTree = "<group>"; };
-		967A9111DF4DF95A1B9C87BE5F600E3C /* Pods-XTableViewIndex_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTableViewIndex_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2D1708AAC2ECD2CC2B0FDB4D9C1A9A /* preview_bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = preview_bg.png; path = XTableViewIndex/Assets/preview_bg.png; sourceTree = "<group>"; };
 		AAEF11E880FB88DCCD6F98A891BA602D /* preview_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "preview_bg@2x.png"; path = "XTableViewIndex/Assets/preview_bg@2x.png"; sourceTree = "<group>"; };
-		B012EED3A42FA30190BC0B73C689F5D7 /* Pods-XTableViewIndex_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XTableViewIndex_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CB02E98DC6DEA704A2F18A1C0780F8B9 /* Pods-XTableViewIndex_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XTableViewIndex_Example-umbrella.h"; sourceTree = "<group>"; };
 		D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XTableViewIndex.framework; path = XTableViewIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEB06C677CDC41D4FD3738E56497868 /* preview_bg@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "preview_bg@3x.png"; path = "XTableViewIndex/Assets/preview_bg@3x.png"; sourceTree = "<group>"; };
 		E5A878A57D278E050E6A6F18EE5761B0 /* XTableViewIndex.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XTableViewIndex.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F1D3EB7A48684564EEFFF09D77459F33 /* Pods-XTableViewIndex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FCFBC8B8B3B4BDB7239C54F7BBBBE8AD /* Pods_XTableViewIndex_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XTableViewIndex_Tests.framework; path = "Pods-XTableViewIndex_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3B58C28506D9BD2E1D0EE50A3A6133 /* Pods-XTableViewIndex_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XTableViewIndex_Example.modulemap"; sourceTree = "<group>"; };
+		F022EB3A4304818CFD4FFEF3AE77DB84 /* Pods-XTableViewIndex_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,37 +95,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D54C1E395A777AB628971E471BDDBDD0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				846A1AC2DB18C66900A39D6605E7E85F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0504135AB3343DF80724819829F9B57E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D24B39650FBD5498253810FD9FA6025E /* Pods-XTableViewIndex_Example */,
-				875A7ECFEB1F889955381542AB406485 /* Pods-XTableViewIndex_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		0BD6D3E8BBA7513B974979203331CB71 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0F968186CAB59D1E03D4F754023D461D /* Pods_XTableViewIndex_Example.framework */,
-				FCFBC8B8B3B4BDB7239C54F7BBBBE8AD /* Pods_XTableViewIndex_Tests.framework */,
-				62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */,
-				D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,20 +106,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		875A7ECFEB1F889955381542AB406485 /* Pods-XTableViewIndex_Tests */ = {
+		7EE349B2D35E507C70503304A64181E4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A414BA1CDC5E6F5F77BA99916D20D0D /* Pods-XTableViewIndex_Tests.modulemap */,
-				85EC4B314D7DE0AD5015C2BE26B6457E /* Pods-XTableViewIndex_Tests-acknowledgements.markdown */,
-				742D46630C1ED030D9447910B26443FE /* Pods-XTableViewIndex_Tests-acknowledgements.plist */,
-				88D0EB8375DD3BF58CF7B67537C2EB7C /* Pods-XTableViewIndex_Tests-dummy.m */,
-				53A0F4D6A516C34626284A171341A354 /* Pods-XTableViewIndex_Tests-Info.plist */,
-				92B5F0B506FC5B0AF2542BF70ACF83E1 /* Pods-XTableViewIndex_Tests-umbrella.h */,
-				54094760A8546572A812BED4DDC3CB78 /* Pods-XTableViewIndex_Tests.debug.xcconfig */,
-				86A022960D3918335ADFFEE34565003A /* Pods-XTableViewIndex_Tests.release.xcconfig */,
+				EAC678D0E9313BB1A6672F48D81271F6 /* Pods-XTableViewIndex_Example */,
 			);
-			name = "Pods-XTableViewIndex_Tests";
-			path = "Target Support Files/Pods-XTableViewIndex_Tests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		8CEB15ECD5D0C5E9BB3818626D763614 /* Development Pods */ = {
@@ -224,32 +169,25 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		CB49AF9610577083B5D4748551DDF3DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F968186CAB59D1E03D4F754023D461D /* Pods_XTableViewIndex_Example.framework */,
+				62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */,
+				D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				8CEB15ECD5D0C5E9BB3818626D763614 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				0BD6D3E8BBA7513B974979203331CB71 /* Products */,
-				0504135AB3343DF80724819829F9B57E /* Targets Support Files */,
+				CB49AF9610577083B5D4748551DDF3DE /* Products */,
+				7EE349B2D35E507C70503304A64181E4 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D24B39650FBD5498253810FD9FA6025E /* Pods-XTableViewIndex_Example */ = {
-			isa = PBXGroup;
-			children = (
-				FF3B58C28506D9BD2E1D0EE50A3A6133 /* Pods-XTableViewIndex_Example.modulemap */,
-				8E6E147E67121C2FF66E262A7B3A6BD2 /* Pods-XTableViewIndex_Example-acknowledgements.markdown */,
-				938F405B176916AB460E61C534CA4917 /* Pods-XTableViewIndex_Example-acknowledgements.plist */,
-				967A9111DF4DF95A1B9C87BE5F600E3C /* Pods-XTableViewIndex_Example-dummy.m */,
-				B012EED3A42FA30190BC0B73C689F5D7 /* Pods-XTableViewIndex_Example-frameworks.sh */,
-				78197A2178EF322F4C0ABDDF7FD3343D /* Pods-XTableViewIndex_Example-Info.plist */,
-				224F1227A4C9AC1F354A57D125C7D1DF /* Pods-XTableViewIndex_Example-umbrella.h */,
-				76B14859461B513F757433B63B634858 /* Pods-XTableViewIndex_Example.debug.xcconfig */,
-				F1D3EB7A48684564EEFFF09D77459F33 /* Pods-XTableViewIndex_Example.release.xcconfig */,
-			);
-			name = "Pods-XTableViewIndex_Example";
-			path = "Target Support Files/Pods-XTableViewIndex_Example";
 			sourceTree = "<group>";
 		};
 		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
@@ -261,17 +199,26 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EAC678D0E9313BB1A6672F48D81271F6 /* Pods-XTableViewIndex_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5505AE2FDBE6CDA2C2A851E069397F85 /* Pods-XTableViewIndex_Example.modulemap */,
+				136680317CA1C67F6D62FB146F908B69 /* Pods-XTableViewIndex_Example-acknowledgements.markdown */,
+				F022EB3A4304818CFD4FFEF3AE77DB84 /* Pods-XTableViewIndex_Example-acknowledgements.plist */,
+				09F23C7D0EB06928E0C7BE2496D08900 /* Pods-XTableViewIndex_Example-dummy.m */,
+				6F0FE1B04B6A19D22FEF09EEA3023620 /* Pods-XTableViewIndex_Example-frameworks.sh */,
+				182E520715B2FE5AF9D0DCFB08288CF0 /* Pods-XTableViewIndex_Example-Info.plist */,
+				CB02E98DC6DEA704A2F18A1C0780F8B9 /* Pods-XTableViewIndex_Example-umbrella.h */,
+				1F56FA5DA465E495E3BF826C27B44B6C /* Pods-XTableViewIndex_Example.debug.xcconfig */,
+				13EFBC4556FEFF69B8DA9DD25E42FC03 /* Pods-XTableViewIndex_Example.release.xcconfig */,
+			);
+			name = "Pods-XTableViewIndex_Example";
+			path = "Target Support Files/Pods-XTableViewIndex_Example";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		131039C08C8270E15D788C97A672B684 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56030BC8E86A11A46D8C36135E4C0700 /* Pods-XTableViewIndex_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDB4FC0E4DFB3A2CB95AC419B3A07104 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,25 +293,6 @@
 			productReference = D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		ECB877CBB29B8875C249310729FB38FE /* Pods-XTableViewIndex_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD2358EAE357B8FDC8F8B1C29F4B822D /* Build configuration list for PBXNativeTarget "Pods-XTableViewIndex_Tests" */;
-			buildPhases = (
-				131039C08C8270E15D788C97A672B684 /* Headers */,
-				E8A260692F14484E427E9F70F131EA14 /* Sources */,
-				D54C1E395A777AB628971E471BDDBDD0 /* Frameworks */,
-				475950543AC62A2BE15E1A1B51966F88 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				086B3B385FCF56E90FC46504927713FB /* PBXTargetDependency */,
-			);
-			name = "Pods-XTableViewIndex_Tests";
-			productName = "Pods-XTableViewIndex_Tests";
-			productReference = FCFBC8B8B3B4BDB7239C54F7BBBBE8AD /* Pods_XTableViewIndex_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,12 +311,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0BD6D3E8BBA7513B974979203331CB71 /* Products */;
+			productRefGroup = CB49AF9610577083B5D4748551DDF3DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				19B5685B4A72C76006025B7983BF7AD7 /* Pods-XTableViewIndex_Example */,
-				ECB877CBB29B8875C249310729FB38FE /* Pods-XTableViewIndex_Tests */,
 				EAFFEA9C5273C3C5C46DA3DC9CA40340 /* XTableViewIndex */,
 				D1C513499CB91E9A68CB9AD87B3D0356 /* XTableViewIndex-XTableViewIndex */,
 			);
@@ -411,13 +338,6 @@
 				831FFD1DD46E1FC1EE79760777782B26 /* preview_bg.png in Resources */,
 				AC259626292023FD7E564C7EED836A53 /* preview_bg@2x.png in Resources */,
 				E1267D686C60BC52DB7310B79B66F8D0 /* preview_bg@3x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		475950543AC62A2BE15E1A1B51966F88 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,23 +375,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8A260692F14484E427E9F70F131EA14 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF32894B329361A776C59FB3302A5CC7 /* Pods-XTableViewIndex_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		086B3B385FCF56E90FC46504927713FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-XTableViewIndex_Example";
-			target = 19B5685B4A72C76006025B7983BF7AD7 /* Pods-XTableViewIndex_Example */;
-			targetProxy = 83B9F4A8F99FA7663A53DD316891107A /* PBXContainerItemProxy */;
-		};
 		574A14C258D77172FF98D37C5C0BA985 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XTableViewIndex;
@@ -487,40 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2EC0C9D8BEEE80B73643D6FDEEE38CFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86A022960D3918335ADFFEE34565003A /* Pods-XTableViewIndex_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		357C6FF69897648BDCB2B55F38F21E06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FBCF30C301F364663BF2D907E29617E /* XTableViewIndex.xcconfig */;
@@ -569,39 +441,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		64268D109414C84B9EF5161F9AEE9CDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54094760A8546572A812BED4DDC3CB78 /* Pods-XTableViewIndex_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		6D0C8027A8C7CD6E586BF8582E1BB1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -746,7 +585,7 @@
 		};
 		9C89164543FCD71D7FEB1112433FBECF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76B14859461B513F757433B63B634858 /* Pods-XTableViewIndex_Example.debug.xcconfig */;
+			baseConfigurationReference = 1F56FA5DA465E495E3BF826C27B44B6C /* Pods-XTableViewIndex_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -810,7 +649,7 @@
 		};
 		DB2A2FF6DF644A6086218BB2EEB47F9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1D3EB7A48684564EEFFF09D77459F33 /* Pods-XTableViewIndex_Example.release.xcconfig */;
+			baseConfigurationReference = 13EFBC4556FEFF69B8DA9DD25E42FC03 /* Pods-XTableViewIndex_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -868,15 +707,6 @@
 			buildConfigurations = (
 				6D0C8027A8C7CD6E586BF8582E1BB1B7 /* Debug */,
 				357C6FF69897648BDCB2B55F38F21E06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD2358EAE357B8FDC8F8B1C29F4B822D /* Build configuration list for PBXNativeTarget "Pods-XTableViewIndex_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				64268D109414C84B9EF5161F9AEE9CDC /* Debug */,
-				2EC0C9D8BEEE80B73643D6FDEEE38CFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
