@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     5、支持全局初始配置
     DESC
 
-    s.homepage         = 'https://github.com/dte2mdj'
+    s.homepage         = 'https://github.com/dte2mdj/XTableViewIndex'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Xwg' => 'awen365@qq.com' }
