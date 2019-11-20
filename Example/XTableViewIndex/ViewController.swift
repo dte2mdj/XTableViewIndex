@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewIndex.dataSource = self
-        tableViewIndex.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

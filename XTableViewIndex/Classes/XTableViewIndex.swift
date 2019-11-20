@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+// MARK: XTableViewIndexDataSource 数据源
 @objc public protocol XTableViewIndexDataSource: NSObjectProtocol {
     /// 组标题
     /// - Parameter tableViewIndex: XTableViewIndex
     @objc func indexTitles(for tableViewIndex: XTableViewIndex) -> [String]
 }
 
+// MARK: XTableViewIndexDelegate 代理
 @objc public protocol XTableViewIndexDelegate: NSObjectProtocol {
     /// 选中了索引用 index 的 item
     /// - Parameters:
@@ -56,7 +58,7 @@ final public class XTableViewIndex: UIView {
     @IBInspectable public var itemWidth: CGFloat = XTableViewIndex.itemWidth {
         didSet {
             guard oldValue != itemWidth else { return }
-            _setNeedUpdateItemsWidth()
+            setNeedUpdateItemsWidth()
         }
     }
     
@@ -64,14 +66,14 @@ final public class XTableViewIndex: UIView {
     @IBInspectable public var itemTextColor: UIColor = XTableViewIndex.itemTextColor {
         didSet {
             guard oldValue != itemTextColor else { return }
-            _setNeedUpdateItemsColor()
+            setNeedUpdateItemsColor()
         }
     }
     /// item 选中颜色（默认：.white）
     @IBInspectable public var itemSelectedTextColor: UIColor = XTableViewIndex.itemSelectedTextColor {
         didSet {
             guard oldValue != itemSelectedTextColor else { return }
-            _setNeedUpdateItemsColor()
+            setNeedUpdateItemsColor()
         }
     }
     
@@ -79,14 +81,14 @@ final public class XTableViewIndex: UIView {
     @IBInspectable public var itemBackgroundColor: UIColor = XTableViewIndex.itemBackgroundColor {
         didSet {
             guard oldValue != itemBackgroundColor else { return }
-            _setNeedUpdateItemsColor()
+            setNeedUpdateItemsColor()
         }
     }
     /// item 选中背景色（默认：#FF7721）
     @IBInspectable public var itemSelectedBackgroundColor: UIColor = XTableViewIndex.itemSelectedBackgroundColor {
         didSet {
             guard oldValue != itemSelectedBackgroundColor else { return }
-            _setNeedUpdateItemsColor()
+            setNeedUpdateItemsColor()
         }
     }
     
@@ -94,23 +96,23 @@ final public class XTableViewIndex: UIView {
     public var itemFont: UIFont = XTableViewIndex.itemFont {
         didSet {
             guard oldValue != itemFont else { return }
-            _setNeedUpdateItemsFont()
+            setNeedUpdateItemsFont()
         }
     }
     /// item 选中字体
     public var itemSelectedFont: UIFont = XTableViewIndex.itemSelectedFont {
         didSet {
             guard oldValue != itemSelectedFont else { return }
-            _setNeedUpdateItemsFont()
+            setNeedUpdateItemsFont()
         }
     }
     
     /// 数据源
-    weak public var dataSource: XTableViewIndexDataSource? {
+    @IBOutlet weak public var dataSource: XTableViewIndexDataSource? {
         didSet { reloadData() }
     }
     /// 代理
-    weak public var delegate: XTableViewIndexDelegate?
+    @IBOutlet weak public var delegate: XTableViewIndexDelegate?
     
     /// 是否在按压状态
     private(set) var isOnTouch = false
@@ -142,7 +144,7 @@ final public class XTableViewIndex: UIView {
     private lazy var previewItem: UIButton = {
         
         let btn = UIButton()
-        btn.setBackgroundImage(_getBundleImage(named: "preview_bg", ofType: "png"), for: .normal)
+        btn.setBackgroundImage(getBundleImage(named: "preview_bg", ofType: "png"), for: .normal)
         btn.isUserInteractionEnabled = false
         btn.alpha = 0
         return btn
@@ -150,29 +152,53 @@ final public class XTableViewIndex: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        _initSetup()
+        initSetup()
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        _initSetup()
+        initSetup()
     }
     
+    // 为了早点触发 pan 手势
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        let location = (touches.first as AnyObject).location(in: contentStackView)
+        pan.setTranslation(location, in: contentStackView)
+    }
+    
+    
+    // this code will execute only in IB 只在 Interface Builder 上显示
+    public override func prepareForInterfaceBuilder() {
+        
+        let titles: [String] = {
+            let A = Character("A").asciiValue!
+            let Z = Character("Z").asciiValue!
+            
+            return (A...Z).map { String(format: "%c", $0) } + ["#"]
+        }()
+        
+        addItemsToContentStackView(titles: titles)
+    }
+}
+
+public extension XTableViewIndex {
     /// 刷新数据
-    public func reloadData() {
-        _addItemsToContentStackView()
+    func reloadData() {
+        addItemsToContentStackView(titles: dataSource?.indexTitles(for: self) ?? [])
     }
     
     /// 选中的 item
     /// - Parameter index: 索引
-    public func selectItem(at index: Int) {
+    func selectItem(at index: Int) {
         guard index >= 0 && index < items.count && index != selectedItem?.tag else { return }
-        _setSelectedItem(items[index], needFeedback: false, needExecDelegate: false)
+        setSelectedItem(items[index], needFeedback: false, needExecDelegate: false)
     }
     
     /// 更新选中的 item; 在 tableView 代理方法 scrollViewDidScroll(_:) 里面调用
     /// - Parameter tableView: UITableView
-    public func updateSelectItemWhenTableViewDidScroll(_ tableView: UITableView) {
+    func updateSelectItemWhenTableViewDidScroll(_ tableView: UITableView) {
         guard !isOnTouch else { return }
         
         guard let index = tableView.indexPathForRow(at: tableView.contentOffset)?.section else { return }
@@ -180,63 +206,13 @@ final public class XTableViewIndex: UIView {
     }
 }
 
-// MARK: touches 事件
-extension XTableViewIndex {
-    
-    // 为了早点触发 pan 手势
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        pan.setTranslation(
-            (touches.first as AnyObject).location(in: contentStackView),
-            in: contentStackView
-        )
-    }
-    
-    @objc private func panAction(_ pan: UIPanGestureRecognizer) {
-        
-        let touchY = pan.location(in: contentStackView).y
-        
-        switch pan.state {
-            
-        case .began:
-            guard let item = _getSelectItemInContentStackView(with: touchY) else { return }
-            isOnTouch = true
-            previewItem.alpha = 1.0
-            
-            _setSelectedItem(item)
-        case .changed:
-            guard let item = _getSelectItemInContentStackView(with: touchY) else { return }
-            
-            if !isOnTouch {
-                isOnTouch = true
-                previewItem.alpha = 1.0
-            }
-            
-            _setSelectedItem(item)
-        case .ended:
-            isOnTouch = false
-            UIView.animate(withDuration: 0.25) { self.previewItem.alpha = 0 }
-        case .cancelled:
-            print("取消")
-            
-            isOnTouch = false
-            previewItem.alpha = 0   // 异常退出，不需要增加动画效果
-        default:
-            break
-        }
-        
-    }
-}
-
 // MARK: 私有方法
 private extension XTableViewIndex {
     
     /// 初始化设置 subviews
-    func _initSetup() {
+    func initSetup() {
         
         // 设置约束
-        translatesAutoresizingMaskIntoConstraints = false
         addConstraint(widthConstraint)
         
         addSubview(previewItem)
@@ -251,40 +227,37 @@ private extension XTableViewIndex {
         addSubview(contentStackView)
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         addConstraints([
-            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             contentStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         // 添加手势
         addGestureRecognizer(pan)
-        
-        layoutIfNeeded()
     }
     
     /// 添加 item
-    func _addItemsToContentStackView() {
+    func addItemsToContentStackView(titles: [String]) {
         // 移除旧的
         items.forEach { $0.removeFromSuperview() }
         // 获取 titles
-        guard let titles = dataSource?.indexTitles(for: self), !titles.isEmpty else { return }
+        guard !titles.isEmpty else { return }
         // 生成 item 并添加到 contentStackView
         for (index, title) in titles.enumerated() {
-            let item = _makeItem(title: title, index: index)
+            let item = makeItem(title: title, index: index)
             contentStackView.addArrangedSubview(item)
             
             item.addConstraints([item.widthAnchor.constraint(equalToConstant: itemWidth),
                                  item.heightAnchor.constraint(equalTo: item.widthAnchor)])
         }
         // 设置默认
-        _setSelectedItem(items.first!, needFeedback: false)
+        setSelectedItem(items.first!, needFeedback: false)
     }
     
     /// 生成 item
     /// - Parameters:
     ///   - title: 标题
     ///   - index: 索引
-    func _makeItem(title: String, index: Int) -> UILabel {
+    func makeItem(title: String, index: Int) -> UILabel {
         let item = UILabel()
         item.tag = index
         item.text = title
@@ -298,7 +271,7 @@ private extension XTableViewIndex {
     }
     
     /// 更新 items 的宽度
-    func _setNeedUpdateItemsWidth() {
+    func setNeedUpdateItemsWidth() {
         items.forEach {
             $0.constraints
                 .filter { $0.firstAttribute == .width }
@@ -307,7 +280,7 @@ private extension XTableViewIndex {
     }
     
     /// 更新颜色
-    func _setNeedUpdateItemsColor() {
+    func setNeedUpdateItemsColor() {
         items.forEach {
             let isSelected = $0 == selectedItem
             $0.textColor = isSelected ? itemSelectedTextColor : itemTextColor
@@ -316,7 +289,7 @@ private extension XTableViewIndex {
     }
     
     /// 更新文字大小
-    func _setNeedUpdateItemsFont() {
+    func setNeedUpdateItemsFont() {
         items.forEach {
             let isSelected = $0 == selectedItem
             $0.font = isSelected ? itemSelectedFont : itemFont
@@ -328,7 +301,7 @@ private extension XTableViewIndex {
     ///   - toItem: 将要设置的 item
     ///   - needFeedback: 需要反馈（震动反馈）默认 true
     ///   - needExecDelegate: 需要执行代理方法 默认 true
-    func _setSelectedItem(_ item: UILabel, needFeedback: Bool = true, needExecDelegate: Bool = true) {
+    func setSelectedItem(_ item: UILabel, needFeedback: Bool = true, needExecDelegate: Bool = true) {
         guard selectedItem != item else { return }
         // 1.1 设置为默认样式
         selectedItem?.textColor = itemTextColor
@@ -360,10 +333,80 @@ private extension XTableViewIndex {
             delegate?.tableViewIndex(self, didSelectItemAt: item.tag)
         }
     }
+
+    /// 从 bundle 中获取图片
+    /// - Parameter named: 图片名称
+    /// - Parameter ofType: 图片后缀
+    func getBundleImage(named: String, ofType: String) -> UIImage? {
+        let mainBundle = Bundle(for: Self.self)
+        guard let bundlePath = mainBundle.path(forResource: String(describing: Self.self), ofType: "bundle"),
+            let bundle = Bundle(path: bundlePath),
+            let imgPath = bundle.path(forResource: named, ofType: ofType),
+            let img = UIImage(contentsOfFile: imgPath) else { return nil }
+        return img
+    }
+}
+
+// MARK: UIPanGestureRecognizer 事件
+private extension XTableViewIndex {
+    
+    /// 处理滑动手势
+    @objc func panAction(_ pan: UIPanGestureRecognizer) {
+        
+        let touchY = pan.location(in: contentStackView).y
+        
+        switch pan.state {
+            
+        case .began:
+            touchBegin(touchY: touchY)
+        case .changed:
+            touchChanged(touchY: touchY)
+        case .ended:
+            touchEnded()
+        case .cancelled:
+            touchCancelled()
+        default:
+            break
+        }
+        
+    }
+    
+    // 开始
+    func touchBegin(touchY: CGFloat) {
+        guard let item = getSelectItemInContentStackView(touchY: touchY) else { return }
+        isOnTouch = true
+        previewItem.alpha = 1.0
+        
+        setSelectedItem(item)
+    }
+    
+    // 移动
+    func touchChanged(touchY: CGFloat) {
+        guard let item = getSelectItemInContentStackView(touchY: touchY) else { return }
+        
+        if !isOnTouch {
+            isOnTouch = true
+            previewItem.alpha = 1.0
+        }
+        
+        setSelectedItem(item)
+    }
+    
+    // 结束
+    func touchEnded() {
+        isOnTouch = false
+        UIView.animate(withDuration: 0.25) { self.previewItem.alpha = 0 }
+    }
+    
+    // 取消
+    func touchCancelled() {
+        isOnTouch = false
+        previewItem.alpha = 0   // 异常退出，不需要增加动画效果
+    }
     
     /// 获取下一下点击的 item
     /// - Parameter touchY: contentStackView中 点击的 y 坐标
-    func _getSelectItemInContentStackView(with touchY: CGFloat) -> UILabel? {
+    func getSelectItemInContentStackView(touchY: CGFloat) -> UILabel? {
         
         guard !items.isEmpty else { return nil }
         
@@ -381,17 +424,5 @@ private extension XTableViewIndex {
         }
         
         return selectItem
-    }
-    
-    /// 从 bundle 中获取图片
-    /// - Parameter named: 图片名称
-    /// - Parameter ofType: 图片后缀
-    func _getBundleImage(named: String, ofType: String) -> UIImage? {
-        let mainBundle = Bundle(for: Self.self)
-        guard let bundlePath = mainBundle.path(forResource: String(describing: Self.self), ofType: "bundle"),
-            let bundle = Bundle(path: bundlePath),
-            let imgPath = bundle.path(forResource: named, ofType: ofType),
-            let img = UIImage(contentsOfFile: imgPath) else { return nil }
-        return img
     }
 }
