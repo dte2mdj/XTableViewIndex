@@ -343,7 +343,7 @@ private extension XTableViewIndex {
             delegate?.tableViewIndex(self, didSelectItemAt: item.tag)
         }
     }
-
+    
     /// 从 bundle 中获取图片
     /// - Parameter named: 图片名称
     /// - Parameter ofType: 图片后缀

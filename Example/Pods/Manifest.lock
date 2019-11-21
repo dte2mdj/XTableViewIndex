@@ -1,5 +1,5 @@
 PODS:
-  - XTableViewIndex (0.0.2)
+  - XTableViewIndex (0.0.3)
 
 DEPENDENCIES:
   - XTableViewIndex (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XTableViewIndex: 633c43f6533e0f4b5c5e9567e61a3ce3baa71d40
+  XTableViewIndex: 465589194d328f44677efd64ae3a0a9eb220e17a
 
 PODFILE CHECKSUM: b34245251f588e856f5bc3b82814a53c3beed42b
 

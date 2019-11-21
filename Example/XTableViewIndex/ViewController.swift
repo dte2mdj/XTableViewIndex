@@ -77,17 +77,16 @@ extension ViewController: UITableViewDelegate {
         return isTopSection(section) ? .red : .blue
     }
     
-    //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-    //        scrollViewDidEndScroll(scrollView)
-    //    }
-    //    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-    //        scrollViewDidEndScroll(scrollView)
-    //    }
-    //    func scrollViewDidEndScroll(_ scrollView: UIScrollView) {
-    //        let isScrolling = scrollView.isTracking || scrollView.isDragging || scrollView.isDecelerating
-    //        guard !isScrolling else { return }
-    //
-    //    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewDidEndScroll(scrollView)
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        guard decelerate else { return }
+        scrollViewDidEndScroll(scrollView)
+    }
+    func scrollViewDidEndScroll(_ scrollView: UIScrollView) {
+        print("停止了。。。")
+    }
 }
 
 extension ViewController: XTableViewIndexDataSource {

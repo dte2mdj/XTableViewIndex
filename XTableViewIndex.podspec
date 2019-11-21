@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'XTableViewIndex'
-    s.version          = '0.0.2'
+    s.version          = '0.0.3'
     s.summary          = '用于替代系统私有的UITableViewIndex'
 
     # This description is used to generate tags and improve search results.
