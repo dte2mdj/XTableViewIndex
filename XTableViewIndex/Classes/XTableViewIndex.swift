@@ -166,8 +166,18 @@ final public class XTableViewIndex: UIView {
         
         let location = (touches.first as AnyObject).location(in: contentStackView)
         pan.setTranslation(location, in: contentStackView)
+        touchBegin(touchY: location.y)
     }
     
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        touchEnded()
+    }
+    
+    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        touchCancelled()
+    }
     
     // this code will execute only in IB 只在 Interface Builder 上显示
     public override func prepareForInterfaceBuilder() {

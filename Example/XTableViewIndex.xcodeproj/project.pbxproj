@@ -27,9 +27,6 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AF9C7BBEF1A3473AA9CA258 /* Pods-XTableViewIndex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTableViewIndex_Example.release.xcconfig"; path = "Target Support Files/Pods-XTableViewIndex_Example/Pods-XTableViewIndex_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A5C627AA507789D30D50317B /* Pods-XTableViewIndex_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTableViewIndex_Example.debug.xcconfig"; path = "Target Support Files/Pods-XTableViewIndex_Example/Pods-XTableViewIndex_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A98EA24D5B81DF378493DD5C /* Pods-XTableViewIndex_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTableViewIndex_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B38000E84737E02AECFD1267 /* Pods-XTableViewIndex_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTableViewIndex_Tests.release.xcconfig"; path = "Target Support Files/Pods-XTableViewIndex_Tests/Pods-XTableViewIndex_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B7FD10F427395779B6A2066B /* Pods_XTableViewIndex_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTableViewIndex_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3B6759238385F10003C97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD3B675A238385F10003C97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				4520AFA1B3A950E484CB0B31 /* Pods_XTableViewIndex_Example.framework */,
-				B7FD10F427395779B6A2066B /* Pods_XTableViewIndex_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +107,6 @@
 			children = (
 				A5C627AA507789D30D50317B /* Pods-XTableViewIndex_Example.debug.xcconfig */,
 				9AF9C7BBEF1A3473AA9CA258 /* Pods-XTableViewIndex_Example.release.xcconfig */,
-				A98EA24D5B81DF378493DD5C /* Pods-XTableViewIndex_Tests.debug.xcconfig */,
-				B38000E84737E02AECFD1267 /* Pods-XTableViewIndex_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";

@@ -40,13 +40,13 @@
 
 /* Begin PBXFileReference section */
 		09F23C7D0EB06928E0C7BE2496D08900 /* Pods-XTableViewIndex_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XTableViewIndex_Example-dummy.m"; sourceTree = "<group>"; };
-		0F968186CAB59D1E03D4F754023D461D /* Pods_XTableViewIndex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XTableViewIndex_Example.framework; path = "Pods-XTableViewIndex_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F968186CAB59D1E03D4F754023D461D /* Pods_XTableViewIndex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XTableViewIndex_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		136680317CA1C67F6D62FB146F908B69 /* Pods-XTableViewIndex_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XTableViewIndex_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		13D3ABDFAA997F7417774CA76067776B /* XTableViewIndex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XTableViewIndex-dummy.m"; sourceTree = "<group>"; };
 		13EFBC4556FEFF69B8DA9DD25E42FC03 /* Pods-XTableViewIndex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.release.xcconfig"; sourceTree = "<group>"; };
 		182E520715B2FE5AF9D0DCFB08288CF0 /* Pods-XTableViewIndex_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-Info.plist"; sourceTree = "<group>"; };
 		1F56FA5DA465E495E3BF826C27B44B6C /* Pods-XTableViewIndex_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XTableViewIndex_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2B01938053EC64CAA8FB916F11F907BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2B01938053EC64CAA8FB916F11F907BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		30CE0E87E6168B3861436D45BEE9BACC /* XTableViewIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XTableViewIndex.swift; path = XTableViewIndex/Classes/XTableViewIndex.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		31390C96DD6C6F2DFE70E25E54D4137D /* XTableViewIndex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XTableViewIndex-Info.plist"; sourceTree = "<group>"; };
@@ -54,19 +54,19 @@
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5505AE2FDBE6CDA2C2A851E069397F85 /* Pods-XTableViewIndex_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XTableViewIndex_Example.modulemap"; sourceTree = "<group>"; };
 		570D3BA0960A5F4F95F53E9FDE6345EF /* XTableViewIndex-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XTableViewIndex-prefix.pch"; sourceTree = "<group>"; };
-		62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XTableViewIndex.bundle; path = "XTableViewIndex-XTableViewIndex.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E433F5D8AE24A6C483D83C2129367F /* XTableViewIndex.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTableViewIndex.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C389A5615FE4CCCEC3BDA6FD2199DB0 /* XTableViewIndex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XTableViewIndex-umbrella.h"; sourceTree = "<group>"; };
 		6F0FE1B04B6A19D22FEF09EEA3023620 /* Pods-XTableViewIndex_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XTableViewIndex_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6FBCF30C301F364663BF2D907E29617E /* XTableViewIndex.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XTableViewIndex.xcconfig; sourceTree = "<group>"; };
-		89702DAB8DAA3FDB55CF1B11B16A931A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		89702DAB8DAA3FDB55CF1B11B16A931A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		94E0F0B447EC1274F108B9F49A472162 /* ResourceBundle-XTableViewIndex-XTableViewIndex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XTableViewIndex-XTableViewIndex-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E2D1708AAC2ECD2CC2B0FDB4D9C1A9A /* preview_bg.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = preview_bg.png; path = XTableViewIndex/Assets/preview_bg.png; sourceTree = "<group>"; };
 		AAEF11E880FB88DCCD6F98A891BA602D /* preview_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "preview_bg@2x.png"; path = "XTableViewIndex/Assets/preview_bg@2x.png"; sourceTree = "<group>"; };
 		CB02E98DC6DEA704A2F18A1C0780F8B9 /* Pods-XTableViewIndex_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XTableViewIndex_Example-umbrella.h"; sourceTree = "<group>"; };
-		D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XTableViewIndex.framework; path = XTableViewIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59D31F0ECB6E33A168A2B4C91A91656 /* XTableViewIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XTableViewIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEB06C677CDC41D4FD3738E56497868 /* preview_bg@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "preview_bg@3x.png"; path = "XTableViewIndex/Assets/preview_bg@3x.png"; sourceTree = "<group>"; };
-		E5A878A57D278E050E6A6F18EE5761B0 /* XTableViewIndex.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XTableViewIndex.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E5A878A57D278E050E6A6F18EE5761B0 /* XTableViewIndex.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = XTableViewIndex.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F022EB3A4304818CFD4FFEF3AE77DB84 /* Pods-XTableViewIndex_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XTableViewIndex_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -433,9 +433,10 @@
 				PRODUCT_NAME = XTableViewIndex;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -512,8 +513,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -639,9 +639,10 @@
 				PRODUCT_NAME = XTableViewIndex;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
