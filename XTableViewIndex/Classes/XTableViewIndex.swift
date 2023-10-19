@@ -210,8 +210,7 @@ public extension XTableViewIndex {
     /// - Parameter tableView: UITableView
     func updateSelectItemWhenTableViewDidScroll(_ tableView: UITableView) {
         guard !isOnTouch else { return }
-        
-        guard let index = tableView.indexPathForRow(at: tableView.contentOffset)?.section else { return }
+        guard let index = tableView.indexPathsForVisibleRows?.first?.section else { return }
         selectItem(at: index)
     }
 }
@@ -251,16 +250,22 @@ private extension XTableViewIndex {
         items.forEach { $0.removeFromSuperview() }
         // 获取 titles
         guard !titles.isEmpty else { return }
+        
+        var defaultItem: UILabel?
         // 生成 item 并添加到 contentStackView
         for (index, title) in titles.enumerated() {
             let item = makeItem(title: title, index: index)
+            if item.text == selectedItem?.text {
+                defaultItem = item
+            }
             contentStackView.addArrangedSubview(item)
             
             item.addConstraints([item.widthAnchor.constraint(equalToConstant: itemWidth),
                                  item.heightAnchor.constraint(equalTo: item.widthAnchor)])
         }
+        
         // 设置默认
-        setSelectedItem(items.first!, needFeedback: false)
+        setSelectedItem(defaultItem ?? items.first!, needFeedback: false, needExecDelegate: false)
     }
     
     /// 生成 item
@@ -339,7 +344,7 @@ private extension XTableViewIndex {
         }
         
         // 4 执行代理
-        if needExecDelegate {        
+        if needExecDelegate {
             delegate?.tableViewIndex(self, didSelectItemAt: item.tag)
         }
     }
